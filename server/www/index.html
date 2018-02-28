@@ -18,12 +18,20 @@
 	  </div>
 	</nav>
 	<div class="container text-center">
-		<h2>Speed Setings <small id="status"></small></h2>
-		<button class="btn btn-success" onclick="slowLED()">Slow</button>
-		<button class="btn btn-warning" onclick="mediumLED()">Medium</button>
-		<button class="btn btn-danger" onclick="fastLED()">Fast</button>
+		<div>
+			<h2>Control LED <small id="onoroff"></small></h2>
+			<button class="btn btn-primary" onclick="startLED()">Start</button>
+			<button class="btn btn-warning" onclick="stopLED()">Stop</button>
+			<hr>
+		</div>
+		<div>
+			<h2>Speed Setings <small id="status"></small></h2>
+			<button class="btn btn-success" onclick="slowLED()">Slow</button>
+			<button class="btn btn-warning" onclick="mediumLED()">Medium</button>
+			<button class="btn btn-danger" onclick="fastLED()">Fast</button>
 		<hr>
-		<div id="receiveData"></div>
+			<div id="receiveData"></div>
+		</div>
 	</div>
 
 </body>

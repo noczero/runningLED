@@ -95,6 +95,24 @@ io.on('connection' , (socket)=> {
 				console.log("success write 2, fast LED"); // kalo ga error kasih notif
 		});
 	});
+
+	socket.on('turnOff', (data)=> {
+		myPort.write('0', (err)=> {
+			if(err)
+				console.log(err); // munculin error
+			else 
+				console.log("success write 2, fast LED"); // kalo ga error kasih notif
+		});
+	});
+
+	socket.on('turnOn', (data)=> {
+		myPort.write('1', (err)=> {
+			if(err)
+				console.log(err); // munculin error
+			else 
+				console.log("success write 2, fast LED"); // kalo ga error kasih notif
+		});
+	});
 });
 
 // FUNCTION UNTUK PARSING

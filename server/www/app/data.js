@@ -31,3 +31,16 @@ function fastLED(){
 	console.log("fast LED");
 }
 
+function startLED(){
+	const socket = io.connect();
+	socket.emit('turnOn', true);
+	$("#onoroff").text("Turn On LED");
+	console.log("On LED");
+}
+
+function stopLED(){
+	const socket = io.connect();
+	socket.emit('turnOff', true);
+	$("#onoroff").text("Turn Off LED");
+	console.log("Off LED");
+}
