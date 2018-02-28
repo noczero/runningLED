@@ -4,7 +4,8 @@ function update(){
 	socket.on('socketData', (data)=>{
 		console.log(data);
 
-		document.getElementById("receiveData").innerHTML = "Current LED ON " + data.datahasil;
+		// document.getElementById("receiveData").innerHTML = "Current LED ON " + data.datahasil;
+		$("#receiveData").text("Current pin LED ON " + data.datahasil); 
 	});
 
 }
